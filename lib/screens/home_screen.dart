@@ -48,7 +48,7 @@ class _HomeScreen extends State<HomeScreen> {
                 const Padding(
                   padding: EdgeInsets.only(bottom: 10.0),
                   child: Text(
-                    'LISTA DE POKEMON',
+                    'POKÉMON LIST',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -78,7 +78,7 @@ class _HomeScreen extends State<HomeScreen> {
                   const Padding(
                     padding: EdgeInsets.only(bottom: 10.0),
                     child: Text(
-                      'CREAR ENTRADA',
+                      'CREATE A POKÉMON',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black,
@@ -108,7 +108,7 @@ class _HomeScreen extends State<HomeScreen> {
                   const Padding(
                     padding: EdgeInsets.only(bottom: 10.0),
                     child: Text(
-                      'AJUSTES DE CUENTA',
+                      'ACCOUNT SETTINGS',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black,

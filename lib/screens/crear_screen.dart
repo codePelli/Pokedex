@@ -25,7 +25,7 @@ class _CrearScreenState extends State<CrearScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Crear Pokemon'),
+        title: const Text('Create Pokémon'),
       ),
       body: Form(
         key: _formKey,
@@ -39,7 +39,7 @@ class _CrearScreenState extends State<CrearScreen> {
                 decoration: const InputDecoration(labelText: 'ID'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un ID';
+                    return 'Insert an ID';
                   }
                   return null;
                 },
@@ -48,10 +48,10 @@ class _CrearScreenState extends State<CrearScreen> {
                 },
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Nombre'),
+                decoration: const InputDecoration(labelText: 'Name'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un nombre';
+                    return 'Insert a name';
                   }
                   return null;
                 },
@@ -61,10 +61,10 @@ class _CrearScreenState extends State<CrearScreen> {
               ),
               TextFormField(
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(labelText: 'Altura'),
+                decoration: const InputDecoration(labelText: 'Height'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce una altura';
+                    return 'Insert a valid height';
                   }
                   return null;
                 },
@@ -74,10 +74,10 @@ class _CrearScreenState extends State<CrearScreen> {
               ),
               TextFormField(
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(labelText: 'Peso'),
+                decoration: const InputDecoration(labelText: 'Weight'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un peso';
+                    return 'Insert a valid height';
                   }
                   return null;
                 },
@@ -86,10 +86,10 @@ class _CrearScreenState extends State<CrearScreen> {
                 },
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Tipo'),
+                decoration: const InputDecoration(labelText: 'Type'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un tipo';
+                    return 'Insert a valid type';
                   }
                   return null;
                 },
@@ -99,7 +99,7 @@ class _CrearScreenState extends State<CrearScreen> {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
-                child: const Text('CREAR POKÉMON'),
+                child: const Text('CREATE A POKÉMON'),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();

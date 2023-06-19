@@ -38,7 +38,7 @@ class _ListaScreenState extends State<ListaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('LISTA DE POKEMON'),
+        title: Text('POKÉMON LIST'),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(70),
           child: Padding(
@@ -46,7 +46,7 @@ class _ListaScreenState extends State<ListaScreen> {
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                hintText: "Buscar en la Pokédex...",
+                hintText: "Search in Pokédex...",
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -80,7 +80,7 @@ class _ListaScreenState extends State<ListaScreen> {
                         pokemons = apiService.getPokemons(pokemonsToShow, 0);
                       });
                     },
-                    child: Text('Cargar más'),
+                    child: Text('Load more...'),
                   );
                 } else {
                   if (index < snapshot.data!.length) {
@@ -101,7 +101,7 @@ class _ListaScreenState extends State<ListaScreen> {
                             ElevatedButton(
                               onPressed: () {
                               },
-                              child: Text('Editar'),
+                              child: Text('Edit'),
                             ),
                             SizedBox(width: 10),
                             ElevatedButton(
@@ -111,7 +111,7 @@ class _ListaScreenState extends State<ListaScreen> {
                               onPressed: () {
                                 BorrarPokemon(pokemon);
                               },
-                              child: Text('Borrar'),
+                              child: Text('Delete'),
                             ),
                           ],
                         ),

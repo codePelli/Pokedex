@@ -21,7 +21,7 @@ class _PerfilScreenState extends State<PerfilScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ajustes de cuenta'),
+        title: const Text('Account settings'),
       ),
       body: Form(
         key: _formKey,
@@ -32,11 +32,11 @@ class _PerfilScreenState extends State<PerfilScreen> {
             children: <Widget>[
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: 'Nombre',
+                  labelText: 'Name',
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un nombre';
+                    return 'Insert your name';
                   }
                   return null;
                 },
@@ -46,11 +46,11 @@ class _PerfilScreenState extends State<PerfilScreen> {
               ),
               TextFormField(
                 decoration: const InputDecoration(
-                  labelText: 'Apellido',
+                  labelText: 'Surname',
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un apellido';
+                    return 'Insert your surname';
                   }
                   return null;
                 },
@@ -65,10 +65,10 @@ class _PerfilScreenState extends State<PerfilScreen> {
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce un email';
+                    return 'Insert an email';
                   }
                   if (!value.contains('@')) {
-                    return 'Introduce un email válido';
+                    return 'Insert a valid email';
                   }
                   return null;
                 },
@@ -79,11 +79,11 @@ class _PerfilScreenState extends State<PerfilScreen> {
               TextFormField(
                 keyboardType: TextInputType.datetime,
                 decoration: const InputDecoration(
-                  labelText: 'Fecha de nacimiento',
+                  labelText: 'Date of birth',
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce una fecha de nacimiento';
+                    return 'Insert a date of birth';
                   }
                   return null;
                 },
@@ -94,14 +94,14 @@ class _PerfilScreenState extends State<PerfilScreen> {
               TextFormField(
                 obscureText: true,
                 decoration: const InputDecoration(
-                  labelText: 'Contraseña',
+                  labelText: 'Password',
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Introduce una contraseña';
+                    return 'Insert a password';
                   }
                   if (value.length < 6) {
-                    return 'La contraseña debe tener al menos 6 caracteres';
+                    return 'Password must have at least 6 characters';
                   }
                   return null;
                 },
@@ -125,7 +125,7 @@ class _PerfilScreenState extends State<PerfilScreen> {
                             // TODO: Guardar los datos en BBDD
                           }
                         },
-                        child: const Text('Guardar cambios'),
+                        child: const Text('Save changes'),
                       ),
                     ),
                     Padding(
@@ -137,7 +137,7 @@ class _PerfilScreenState extends State<PerfilScreen> {
                         onPressed: () {
                           Navigator.pushNamed(context, LoginScreen.id);
                           },
-                        child: const Text('Desconectar'),
+                        child: const Text('Disconnect'),
                       ),
                     ),
                   ]
